@@ -187,7 +187,7 @@ let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', '^\.svn$']
 
 autocmd BufRead,BufNewFile *.pl,*.plx,*.pm,*.t command! -range=% -nargs=* Tidy <line1>,<line2>!perltidy -q
 autocmd BufRead,BufNewFile *.pl,*.plx,*.pm,*.t noremap <leader>t :Tidy<CR>
-autocmd BufWritePre  *.{cpp,h,c,pl,pm,t,py,rb,pp}  call StripTrailingWhite()
+autocmd BufWritePre * call StripTrailingWhite()
 "autocmd FileType python compiler pylint
 au BufRead,BufNewFile {capfile,Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
 au FileType ruby setl sw=2 ts=2 sts=2 et
