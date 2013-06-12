@@ -33,6 +33,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'Townk/vim-autoclose'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'tomasr/molokai'
 " Bundle 'tlib'
 " Bundle 'vcscommand'
 
@@ -118,7 +119,7 @@ endif
 " first, enable status line always
 set laststatus=2
 if has('statusline')
-"    set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]%=[LEN=%L] 
+"    set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]%=[LEN=%L]
 " http://informatique-et-liberte.tuxfamily.org/2009/06/27/vim-et-son-vimrc-une-barre-detat-personnalisee/#more-250
     set statusline=\ %f%m%r\ u+%B\ [%{strlen(&ft)?&ft:'aucun'},%{strlen(&fenc)?&fenc:&enc},%{&fileformat},ts:%{&tabstop}]%=l.%l/%L,c.%c%V\ %P
 
@@ -162,7 +163,7 @@ iab BDate <C-R>=strftime("meta-creation_date: %d.%m.%Y %H:%M")<CR>
 "       imap î &icirc;
 "       imap ù &ugrave;
 
-" From vimcasts.org, tip #1 
+" From vimcasts.org, tip #1
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
