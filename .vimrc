@@ -33,6 +33,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'Townk/vim-autoclose'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'tpope/vim-fugitive'
 Bundle 'tomasr/molokai'
 " Bundle 'tlib'
 " Bundle 'vcscommand'
