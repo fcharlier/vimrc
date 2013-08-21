@@ -35,6 +35,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'tpope/vim-fugitive'
 Bundle 'tomasr/molokai'
+Bundle 'nathanaelkane/vim-indent-guides'
 " Bundle 'tlib'
 " Bundle 'vcscommand'
 
@@ -228,3 +229,10 @@ endfunction
 let g:openssl_backup=1
 
 nmap <leader>t :Tabularize/=><CR>
+
+" Indent guides
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
