@@ -36,6 +36,7 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'tpope/vim-fugitive'
 Bundle 'tomasr/molokai'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'wincent/Command-T'
 " Bundle 'tlib'
 " Bundle 'vcscommand'
 
@@ -228,7 +229,8 @@ endfunction
 " enable backups of encrypted files
 let g:openssl_backup=1
 
-nmap <leader>t :Tabularize/=><CR>
+" Align '=>' signs
+nmap <leader>= :Tabularize/=><CR>
 
 " Indent guides
 let g:indent_guides_auto_colors = 0
