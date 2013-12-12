@@ -239,3 +239,11 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+
+"This allows for change paste motion cp{motion}
+"http://stackoverflow.com/questions/2471175/vim-replace-word-with-contents-of-paste-buffer/5357194#5357194
+nmap <silent> cp :set opfunc=ChangePaste<CR>g@
+function! ChangePaste(type, ...)
+    silent exe "normal! `[v`]\"_c"
+    silent exe "normal! p"
+endfunction
