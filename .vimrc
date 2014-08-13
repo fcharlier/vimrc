@@ -196,7 +196,7 @@ autocmd BufRead,BufNewFile *.pl,*.plx,*.pm,*.t noremap <leader>t :Tidy<CR>
 autocmd BufWritePre * call StripTrailingWhite()
 "autocmd FileType python compiler pylint
 au BufRead,BufNewFile {capfile,Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
-au FileType ruby setl sw=2 ts=2 sts=2 et
+au FileType {ruby,yaml} setl sw=2 ts=2 sts=2 et
 
 function! StripTrailingWhite()
     let l:winview = winsaveview()
