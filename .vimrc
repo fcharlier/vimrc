@@ -38,6 +38,7 @@ Bundle 'tomasr/molokai'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'wincent/Command-T'
 Bundle 'klen/python-mode'
+Bundle 'kablamo/vim-git-log'
 " Bundle 'tlib'
 " Bundle 'vcscommand'
 
