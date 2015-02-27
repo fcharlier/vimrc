@@ -200,7 +200,7 @@ au FileType {ruby,yaml} setl sw=2 ts=2 sts=2 et
 
 function! StripTrailingWhite()
     let l:winview = winsaveview()
-    silent! %s/\s\+$//
+    silent! %s/\%(^--\)\@<!\s\+$//
     call winrestview(l:winview)
 endfunction
 
