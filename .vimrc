@@ -36,7 +36,7 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'tpope/vim-fugitive'
 Bundle 'tomasr/molokai'
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'klen/python-mode'
 Bundle 'kablamo/vim-git-log'
 " Bundle 'tlib'
