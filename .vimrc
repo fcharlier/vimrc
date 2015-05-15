@@ -39,6 +39,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'kien/ctrlp.vim'
 Bundle 'klen/python-mode'
 Bundle 'kablamo/vim-git-log'
+Bundle 'caio/querycommandcomplete.vim'
 " Bundle 'tlib'
 " Bundle 'vcscommand'
 
@@ -205,9 +206,10 @@ function! StripTrailingWhite()
 endfunction
 
 " set formatprg=par\ -w72rjq\ P+\\[
-set spelllang=fr_fr
+set spelllang=en_us
 
-au BufRead ~/.tmp/mutt* set tw=72 spell
+let g:qcc_query_command="lbdbq '%s'"
+au BufRead /tmp/mutt* setlocal tw=72 spell omnifunc=QueryCommandComplete
 
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
