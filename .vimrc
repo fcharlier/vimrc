@@ -103,7 +103,11 @@ else
 
     if &t_Co > 255
         let g:molokai_original=1
+        let g:rehash256=1
         colorscheme molokai
+        " Some additional conf not in molokai
+        hi IndentGuidesOdd  guibg=red   ctermbg=233
+        hi IndentGuidesEven guibg=green ctermbg=235
     else
         colorscheme delek
     endif
