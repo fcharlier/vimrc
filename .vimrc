@@ -210,6 +210,7 @@ set spelllang=en_us
 
 let g:qcc_query_command="lbdbq '%s'"
 au BufRead /tmp/mutt* setlocal tw=72 spell omnifunc=QueryCommandComplete
+let g:qcc_multiline=1
 
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
