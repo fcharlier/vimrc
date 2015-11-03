@@ -216,6 +216,8 @@ let g:qcc_query_command="lbdbq '%s'"
 au BufRead /tmp/mutt* setlocal tw=72 spell omnifunc=QueryCommandComplete
 let g:qcc_multiline=1
 
+nnoremap <silent> <leader>gr <Esc>d/-- \nFrançois Charlier<CR>:nohl<CR>O
+
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
 endif
