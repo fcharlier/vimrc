@@ -186,6 +186,12 @@ set listchars=tab:▸\ ,eol:¬
 " au BufWritePost,BufLeave,WinLeave ?* mkview
 " au BufReadPre ?* silent loadview
 
+"
+" AutoClose Settings
+"
+
+" Disable expanding spaces, breaks abbreviations expanding with <SPACE>
+let b:AutoCloseExpandSpace=0
 
 " Shortcut to rapidly un-hilite search resyults
 nmap <leader>hh :nohlsearch<CR>
