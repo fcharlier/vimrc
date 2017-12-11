@@ -40,6 +40,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'klen/python-mode'
 Bundle 'kablamo/vim-git-log'
 Bundle 'caio/querycommandcomplete.vim'
+Bundle 'lepture/vim-jinja'
+Bundle 'SidOfc/mkdx'
 " Bundle 'tlib'
 " Bundle 'vcscommand'
 
