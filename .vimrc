@@ -4,6 +4,13 @@ filetype off     " required!
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
+" Hack to force the use of python3, unless started with
+" `vim --cmd 'let py2 = 1'`
+" Source: https://unix.stackexchange.com/a/306188
+if exists('py2') && has('python')
+elseif has('python3')
+endif
+
 " let Vundle manage bundle
 Bundle 'gmarik/vundle'
 
