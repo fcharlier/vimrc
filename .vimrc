@@ -51,6 +51,7 @@ Bundle 'lepture/vim-jinja'
 Bundle 'SidOfc/mkdx'
 " Bundle 'tlib'
 " Bundle 'vcscommand'
+Bundle 'ambv/black'
 
 filetype plugin indent on " required!
 syntax on
