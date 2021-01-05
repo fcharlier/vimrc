@@ -4,13 +4,7 @@ filetype off     " required!
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-" Hack to force the use of python3, unless started with
-" `vim --cmd 'let py2 = 1'`
-" Source: https://unix.stackexchange.com/a/306188
-if exists('py2') && has('python')
-elseif has('python3')
-endif
-
+call vundle#begin()
 " let Vundle manage bundle
 Bundle 'gmarik/vundle'
 
@@ -49,9 +43,10 @@ Bundle 'kablamo/vim-git-log'
 Bundle 'caio/querycommandcomplete.vim'
 Bundle 'lepture/vim-jinja'
 Bundle 'SidOfc/mkdx'
-" Bundle 'tlib'
-" Bundle 'vcscommand'
-Bundle 'ambv/black'
+Bundle 'tlib'
+Bundle 'vim-scripts/vcscommand.vim'
+Plugin 'ambv/black'
+call vundle#end()
 
 filetype plugin indent on " required!
 syntax on
@@ -275,3 +270,8 @@ function! ChangePaste(type, ...)
 endfunction
 
 let g:pymode_rope = 0
+let g:pymode_options_max_line_length = 88
+let g:black_linelength = 88
+let g:syntastic_python_checkers = []
+
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
