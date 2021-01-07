@@ -1,6 +1,10 @@
 set nocompatible " be iMproved
 filetype off     " required!
 
+" Powerline from system
+set rtp+=/usr/share/vim/vimfiles
+
+" Vundle
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
@@ -33,7 +37,6 @@ Bundle 'godlygeek/tabular'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'Townk/vim-autoclose'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'tpope/vim-fugitive'
 Bundle 'tomasr/molokai'
 Bundle 'nathanaelkane/vim-indent-guides'
