@@ -23,7 +23,6 @@ Bundle 'gmarik/vundle'
 
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'tomtom/quickfixsigns_vim'
-Bundle 'rodjek/vim-puppet'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'scrooloose/nerdtree'
@@ -50,6 +49,13 @@ Bundle 'tlib'
 Bundle 'vim-scripts/vcscommand.vim'
 Plugin 'ambv/black'
 call vundle#end()
+
+let g:mkdx#settings = { 'highlight': { 'enable': 1, 'frontmatter': { 'yaml': 1, 'json': 1 } },
+            \ 'enter': { 'shift': 1 },
+            \ 'links': { 'external': { 'enable': 1 }, 'conceal': 1 },
+            \ 'toc': { 'text': 'Table of Contents', 'update_on_write': 1 },
+            \ 'fold': { 'enable': 1 } }
+
 
 filetype plugin indent on " required!
 syntax on
