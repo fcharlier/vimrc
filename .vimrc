@@ -31,7 +31,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/snipMate'
 Bundle 'vim-scripts/sudo.vim'
 Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/syntastic'
 Bundle 'godlygeek/tabular'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'mattn/emmet-vim'
@@ -45,9 +44,11 @@ Bundle 'kablamo/vim-git-log'
 Bundle 'caio/querycommandcomplete.vim'
 Bundle 'lepture/vim-jinja'
 Bundle 'SidOfc/mkdx'
-Bundle 'tlib'
+Bundle 'tomtom/tlib_vim'
 Bundle 'vim-scripts/vcscommand.vim'
+Bundle 'unicode.vim'
 Plugin 'ambv/black'
+Plugin 'dense-analysis/ale'
 call vundle#end()
 
 let g:mkdx#settings = { 'highlight': { 'enable': 1, 'frontmatter': { 'yaml': 1, 'json': 1 } },
@@ -63,8 +64,6 @@ syntax on
 "
 " Change <Leader>
 let mapleader = ","
-
-set showmatch
 
 " Search options
 set hlsearch
@@ -281,6 +280,9 @@ endfunction
 let g:pymode_rope = 0
 let g:pymode_options_max_line_length = 88
 let g:black_linelength = 88
-let g:syntastic_python_checkers = []
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" Disable showmatch & matchparen because of a bug in Alacritty
+set noshowmatch
+let loaded_matchparen = 1
