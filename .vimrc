@@ -43,19 +43,22 @@ Bundle 'klen/python-mode'
 Bundle 'kablamo/vim-git-log'
 Bundle 'caio/querycommandcomplete.vim'
 Bundle 'lepture/vim-jinja'
-Bundle 'SidOfc/mkdx'
+Plugin 'SidOfc/mkdx'
 Bundle 'tomtom/tlib_vim'
 Bundle 'vim-scripts/vcscommand.vim'
 Bundle 'unicode.vim'
 Plugin 'ambv/black'
 Plugin 'dense-analysis/ale'
+Plugin 'arouene/vim-ansible-vault'
 call vundle#end()
 
-let g:mkdx#settings = { 'highlight': { 'enable': 1, 'frontmatter': { 'yaml': 1, 'json': 1 } },
+let g:mkdx#settings = { 'highlight': { 'enable': 1, 'frontmatter': { 'yaml': 1, 'json': 1, 'toml': 1 } },
             \ 'enter': { 'shift': 1 },
             \ 'links': { 'external': { 'enable': 1 }, 'conceal': 1 },
             \ 'toc': { 'text': 'Table of Contents', 'update_on_write': 1 },
-            \ 'fold': { 'enable': 1 } }
+            \ 'fold': { 'enable': 1 },
+            \ 'checkbox': {'initial_state': ' ', 'match_attrs': { 'mkdxCheckboxEmpty': '', 'mkdxCheckboxPending': '', 'mkdxCheckboxComplete': '' } } ,
+            \ 'toml': {} }
 
 
 filetype plugin indent on " required!
@@ -283,6 +286,6 @@ let g:black_linelength = 88
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-" Disable showmatch & matchparen because of a bug in Alacritty
-set noshowmatch
-let loaded_matchparen = 1
+" " Disable showmatch & matchparen because of a bug in Alacritty
+" set noshowmatch
+" let loaded_matchparen = 1
